@@ -1,0 +1,119 @@
+/* Progreso: resumen, gráfico de intentos y tabla de detalle. */
+
+.vacio {
+  background: var(--hoja);
+  padding: 26px;
+  border-radius: 2px;
+  max-width: 640px;
+}
+
+.vacio p {
+  margin: 0 0 16px;
+  line-height: 1.55;
+}
+
+.progreso {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.resumen-texto {
+  margin: 0;
+  max-width: 70ch;
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+
+.resumen-texto strong {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.grafico {
+  margin: 0;
+  width: 100%;
+  background: var(--hoja);
+  padding: 12px 14px 10px;
+  border-radius: 2px;
+  box-shadow: var(--sombra-hoja);
+}
+
+.grafico svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grafico figcaption {
+  font-size: 0.85rem;
+  color: var(--suave);
+  margin-top: 4px;
+}
+
+.eje {
+  stroke: var(--borde);
+  stroke-width: 1;
+}
+
+.meta {
+  stroke: var(--violeta);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 5;
+}
+
+.meta-t {
+  fill: var(--violeta);
+  font-size: 12px;
+  font-family: var(--sans);
+}
+
+.linea {
+  fill: none;
+  stroke: var(--tinta);
+  stroke-width: 2;
+}
+
+.p-si {
+  fill: var(--violeta);
+}
+
+.p-no {
+  fill: var(--rojo);
+}
+
+.p-t {
+  fill: var(--suave);
+  font-size: 11px;
+  font-family: var(--sans);
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--hoja);
+  font-size: 0.92rem;
+}
+
+.tabla th,
+.tabla td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--carpeta);
+}
+
+.tabla th {
+  font-weight: 600;
+  color: var(--suave);
+}
+
+.ok-t {
+  color: var(--violeta);
+  font-weight: 700;
+}
+
+.no-t {
+  color: var(--rojo);
+  font-weight: 700;
+}

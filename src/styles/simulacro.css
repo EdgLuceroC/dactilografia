@@ -1,0 +1,157 @@
+/* Simulacro: hoja a copiar, máquina de escribir y tablero lateral. */
+
+.sim {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  gap: 24px;
+  align-items: start;
+}
+
+.barra-textos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.hoja {
+  position: relative;
+  background: var(--hoja);
+  font-family: var(--serif);
+  font-size: 1.07rem;
+  line-height: 1.8;
+  padding: 22px 26px;
+  max-height: 300px;
+  overflow: auto;
+  border-radius: 2px;
+  box-shadow: var(--sombra-hoja);
+  /* Sin selección: en la sede tampoco se puede copiar y pegar. */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pal.ok {
+  color: #7a8499;
+}
+
+.pal.err {
+  color: var(--rojo);
+  text-decoration: underline wavy var(--rojo);
+  text-underline-offset: 4px;
+}
+
+.pal.omit {
+  color: var(--rojo);
+  text-decoration: line-through;
+}
+
+.pal.actual {
+  background: rgba(75, 60, 146, 0.13);
+  box-shadow: 0 2px 0 var(--violeta);
+  border-radius: 2px;
+}
+
+.etiqueta {
+  display: block;
+  margin: 16px 0 6px;
+  font-size: 0.9rem;
+  color: var(--suave);
+}
+
+.maquina {
+  width: 100%;
+  min-height: 150px;
+  font-family: var(--serif);
+  font-size: 1.07rem;
+  line-height: 1.6;
+  padding: 14px 16px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background: var(--hoja);
+  color: var(--tinta);
+  resize: vertical;
+}
+
+.maquina:focus-visible {
+  outline: 3px solid var(--violeta);
+  outline-offset: 1px;
+}
+
+.maquina[readonly] {
+  background: #f6f8fa;
+}
+
+/* --- Tablero ------------------------------------------------------------ */
+
+.tablero {
+  position: sticky;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.reloj {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 4.2rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.reloj.urgente {
+  color: var(--rojo);
+}
+
+.contador p {
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.contador strong {
+  font-size: 1.5rem;
+}
+
+.barra {
+  height: 8px;
+  background: var(--hoja);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.barra span {
+  display: block;
+  height: 100%;
+  background: var(--violeta);
+  transition: width 0.2s;
+}
+
+.modo {
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 10px 12px 12px;
+  margin: 0;
+}
+
+.modo legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0 4px;
+}
+
+.modo label {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 0.92rem;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.modo:disabled {
+  opacity: 0.55;
+}
+
+.modo input {
+  accent-color: var(--violeta);
+}

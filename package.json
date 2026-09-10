@@ -1,0 +1,57 @@
+{
+  "name": "dactilografia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Entrenador de dactilografía para el concurso de ingreso al Poder Judicial de San Juan: simulacro cronometrado, corrección automática, juego de palabras y seguimiento del progreso.",
+  "keywords": [
+    "dactilografia",
+    "mecanografia",
+    "typing",
+    "poder-judicial",
+    "san-juan",
+    "react",
+    "vite"
+  ],
+  "license": "MIT",
+  "author": "EdgLuceroC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EdgLuceroC/dactilografia.git"
+  },
+  "homepage": "https://github.com/EdgLuceroC/dactilografia#readme",
+  "bugs": {
+    "url": "https://github.com/EdgLuceroC/dactilografia/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}

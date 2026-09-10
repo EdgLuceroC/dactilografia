@@ -1,0 +1,33 @@
+name: Proponer una mejora
+description: Una idea para que la práctica sirva más
+labels: ["mejora"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Qué proponés
+    validations:
+      required: true
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qué problema resuelve
+      description: Preferentemente, contado desde la práctica real para el examen.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Simulacro
+        - Corrección y conteo
+        - Juego de palabras
+        - Progreso y estadísticas
+        - Textos de práctica
+        - IA
+        - Otra
+    validations:
+      required: true

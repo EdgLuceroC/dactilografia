@@ -1,0 +1,130 @@
+/* Resultado del simulacro: sello, desglose de errores y devolución de la IA. */
+
+.resultado {
+  margin-top: 22px;
+  background: var(--hoja);
+  padding: 24px 26px;
+  border-radius: 2px;
+  box-shadow: var(--sombra-hoja);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.res-sello {
+  padding-top: 10px;
+}
+
+.sello {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 20px;
+  border: 5px double var(--violeta);
+  color: var(--violeta);
+  border-radius: 8px;
+  transform: rotate(-7deg);
+  mix-blend-mode: multiply;
+  animation: sellar 0.35s ease-out;
+}
+
+.sello.no {
+  border-color: var(--rojo);
+  color: var(--rojo);
+}
+
+.sello-t {
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: 0.08em;
+}
+
+.sello-n {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@keyframes sellar {
+  from {
+    transform: rotate(-7deg) scale(1.7);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-7deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.res-detalle h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.35rem;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.res-detalle h3 {
+  font-size: 0.95rem;
+  margin: 18px 0 8px;
+}
+
+.res-datos {
+  color: var(--suave);
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.errores {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+
+.pista {
+  height: 8px;
+  background: var(--papel);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pista span {
+  display: block;
+  height: 100%;
+  background: var(--rojo);
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.ejemplos {
+  margin: 0;
+  padding-left: 18px;
+  font-family: var(--serif);
+  line-height: 1.6;
+}
+
+.ejemplos s {
+  color: var(--rojo);
+}
+
+.consejo {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--violeta);
+  background: #f3f1fa;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}

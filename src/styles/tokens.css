@@ -1,0 +1,24 @@
+/**
+ * Paleta y tipografías.
+ *
+ * La identidad visual imita una carpeta de expediente: papel, cartulina celeste,
+ * tinta oscura, el violeta de los sellos y el rojo de las correcciones.
+ */
+
+:root {
+  --papel: #eef2f5;
+  --carpeta: #cfe0e8;
+  --carpeta-2: #dce8ed;
+  --borde: #9dbdcc;
+  --tinta: #1c2230;
+  --suave: #56607a;
+  --violeta: #4b3c92;
+  --rojo: #b83232;
+  --hoja: #ffffff;
+
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --sombra-hoja: 2px 3px 0 rgba(28, 34, 48, 0.1);
+  --radio: 6px;
+}

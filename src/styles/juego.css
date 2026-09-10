@@ -1,0 +1,98 @@
+/* Juego de palabras que caen. */
+
+.juego {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.intro-juego {
+  margin: 0;
+  max-width: 70ch;
+  line-height: 1.55;
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 0.95rem;
+  color: var(--suave);
+}
+
+.hud strong {
+  color: var(--tinta);
+  font-size: 1.15rem;
+  margin-left: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.cancha {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: var(--hoja);
+  border-bottom: 3px solid var(--rojo);
+  border-radius: 2px;
+  box-shadow: var(--sombra-hoja);
+}
+
+.cae {
+  position: absolute;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  padding: 2px 9px;
+  border-radius: 4px;
+  background: var(--carpeta);
+  white-space: nowrap;
+}
+
+.cae.coincide {
+  background: var(--violeta);
+  color: #fff;
+}
+
+.velo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 20px;
+}
+
+.velo p {
+  margin: 0;
+}
+
+.velo-t {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.entrada-juego {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  padding: 12px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  background: var(--hoja);
+  color: var(--tinta);
+  width: 100%;
+  max-width: 420px;
+}
+
+.entrada-juego:focus-visible {
+  outline: 3px solid var(--violeta);
+  outline-offset: 1px;
+}
+
+.entrada-juego.fallo {
+  border-color: var(--rojo);
+  box-shadow: 0 0 0 2px var(--rojo);
+}

@@ -1,0 +1,159 @@
+/* Estructura general: fondo, encabezado, pestañas, carpeta y controles comunes. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.app {
+  font-family: var(--sans);
+  color: var(--tinta);
+  background: var(--papel);
+  min-height: 100vh;
+  padding: 32px 20px 48px;
+}
+
+.contenedor {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.encabezado h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+.encabezado p {
+  margin: 0;
+  color: var(--suave);
+  max-width: 64ch;
+  line-height: 1.55;
+}
+
+.pestanas {
+  display: flex;
+  gap: 4px;
+  margin-top: 26px;
+  padding-left: 14px;
+  flex-wrap: wrap;
+}
+
+.pestana {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--borde);
+  border-bottom: none;
+  background: var(--carpeta-2);
+  color: var(--suave);
+  padding: 10px 18px 9px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+
+.pestana[aria-selected="true"] {
+  background: var(--carpeta);
+  color: var(--tinta);
+}
+
+.pestana:focus-visible,
+.btn:focus-visible,
+.chip:focus-visible {
+  outline: 3px solid var(--violeta);
+  outline-offset: 2px;
+}
+
+.carpeta {
+  background: var(--carpeta);
+  border: 1px solid var(--borde);
+  border-radius: 4px 14px 14px 14px;
+  padding: 24px;
+}
+
+/* --- Controles ---------------------------------------------------------- */
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: var(--radio);
+  border: 1px solid var(--tinta);
+  background: var(--tinta);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn.sec {
+  background: transparent;
+  color: var(--tinta);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.chip {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: var(--radio);
+  border: 1px solid var(--borde);
+  background: transparent;
+  color: var(--tinta);
+  cursor: pointer;
+}
+
+.chip.activo {
+  background: var(--hoja);
+  border-color: var(--tinta);
+}
+
+.chip:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.acciones.en-fila {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.aviso {
+  color: var(--rojo);
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+}
+
+.pie {
+  margin-top: 18px;
+  font-size: 0.86rem;
+  color: var(--suave);
+  max-width: 80ch;
+  line-height: 1.55;
+}
+
+.pie a {
+  color: var(--violeta);
+}

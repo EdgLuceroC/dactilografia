@@ -1,0 +1,9 @@
+# Todo el proyecto se guarda con saltos de línea LF, como pide Prettier.
+* text=auto eol=lf
+
+# Binarios: sin conversión.
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary

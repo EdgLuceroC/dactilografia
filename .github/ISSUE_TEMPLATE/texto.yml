@@ -1,0 +1,34 @@
+name: Aportar un texto de práctica
+description: Un escrito judicial nuevo para el simulacro
+labels: ["texto"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        El texto tiene que ser **original y ficticio**: sin escritos reales, sin
+        nombres de personas y sin material del concurso.
+
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre del texto
+      placeholder: Sentencia de desalojo
+    validations:
+      required: true
+
+  - type: textarea
+    id: texto
+    attributes:
+      label: Texto
+      description: Un solo párrafo, entre 180 y 210 palabras, con tildes y puntuación cuidadas.
+      render: text
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmacion
+    attributes:
+      label: Confirmación
+      options:
+        - label: El texto es original y ficticio, y no contiene datos de personas reales.
+          required: true

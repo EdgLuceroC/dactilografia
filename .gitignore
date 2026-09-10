@@ -1,0 +1,39 @@
+# Dependencias
+node_modules/
+.pnp/
+.pnp.js
+
+# Build
+dist/
+dist-ssr/
+build/
+*.local
+
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Herramientas y caches
+.vite/
+coverage/
+.eslintcache
+.vercel/
+.netlify/
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

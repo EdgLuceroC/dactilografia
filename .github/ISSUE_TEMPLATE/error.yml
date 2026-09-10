@@ -1,0 +1,57 @@
+name: Reportar un error
+description: Algo no funciona como debería
+labels: ["error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Si el problema es de **conteo de palabras**, completá los campos del texto:
+        sin eso no se puede reproducir.
+
+  - type: textarea
+    id: que-pasa
+    attributes:
+      label: Qué pasa
+      description: Qué hiciste y qué viste.
+      placeholder: Terminé un simulacro y el contador marcó 40 palabras correctas.
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperabas que pasara
+    validations:
+      required: true
+
+  - type: textarea
+    id: texto-original
+    attributes:
+      label: Texto original
+      description: Solo si es un problema de conteo. Pegá el fragmento que estabas copiando.
+      render: text
+
+  - type: textarea
+    id: texto-escrito
+    attributes:
+      label: Lo que escribiste
+      description: Solo si es un problema de conteo. Tal cual, con tildes y signos.
+      render: text
+
+  - type: dropdown
+    id: seccion
+    attributes:
+      label: Sección
+      options:
+        - Simulacro
+        - Juego de palabras
+        - Mi progreso
+        - Otra / no sé
+    validations:
+      required: true
+
+  - type: input
+    id: navegador
+    attributes:
+      label: Navegador y sistema
+      placeholder: Chrome 130 en Windows 11

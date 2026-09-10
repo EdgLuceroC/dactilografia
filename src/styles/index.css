@@ -1,0 +1,13 @@
+/**
+ * Hoja de estilos principal.
+ * El orden importa: primero las variables, después la base y al final los
+ * ajustes por pantalla, que deben poder pisar a los anteriores.
+ */
+
+@import "./tokens.css";
+@import "./base.css";
+@import "./simulacro.css";
+@import "./resultado.css";
+@import "./juego.css";
+@import "./progreso.css";
+@import "./responsive.css";
