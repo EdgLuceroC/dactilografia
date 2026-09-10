@@ -18,7 +18,7 @@ La aplicación reproduce esa consigna: cronometra, corrige con el mismo criterio
 ### Simulacro de examen
 
 - Reloj de 4 minutos que arranca con la primera tecla, no con un botón.
-- Tres escritos judiciales incluidos (demanda civil, audiencia penal, sentencia laboral).
+- Nueve escritos judiciales incluidos, de los fueros más frecuentes: civil, penal, laboral, familia, sucesiones, amparo y minería.
 - Corrección palabra por palabra: cada una queda marcada como correcta, equivocada o salteada.
 - **Modo examen**, sin marcas ni contador, para practicar en las mismas condiciones que en la sede.
 - Pegar está deshabilitado, igual que en la prueba real.
@@ -113,7 +113,8 @@ dactilografia/
 │   ├── data/                  # Contenido editable sin tocar lógica
 │   │   ├── textos.js          #   escritos judiciales incluidos
 │   │   ├── temas.js           #   temas que se le piden a la IA
-│   │   └── palabras.js        #   vocabulario del juego
+│   │   ├── palabras.js        #   vocabulario del juego
+│   │   └── textos.test.js     #   controla largo y formato del contenido
 │   ├── hooks/
 │   │   ├── useHistorial.js
 │   │   └── useRecord.js
@@ -154,7 +155,7 @@ El detalle, con ejemplos, está en [docs/correccion.md](docs/correccion.md).
 npm test
 ```
 
-44 pruebas sobre la corrección, la normalización de texto, el motor del juego y las estadísticas: los cuatro lugares donde un error se traduce en un puntaje equivocado.
+68 pruebas sobre la corrección, la normalización de texto, el motor del juego y las estadísticas —los cuatro lugares donde un error se traduce en un puntaje equivocado— y sobre los textos de práctica, que se controlan solos: largo, párrafo único, identificadores y nombres sin repetir.
 
 ---
 

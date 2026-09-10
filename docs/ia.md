@@ -2,7 +2,7 @@
 
 ## Qué agrega y qué no
 
-Sin ninguna configuración, la aplicación funciona completa: tres textos de práctica, cronómetro, corrección, diagnóstico, juego e historial. Nada de eso depende de la IA.
+Sin ninguna configuración, la aplicación funciona completa: nueve textos de práctica, cronómetro, corrección, diagnóstico, juego e historial. Nada de eso depende de la IA.
 
 Con un endpoint configurado aparecen dos botones más:
 

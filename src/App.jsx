@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Simulacro from "./components/Simulacro.jsx";
 import Juego from "./components/Juego.jsx";
 import Progreso from "./components/Progreso.jsx";
@@ -14,6 +14,26 @@ const PESTANAS = [
 export default function App() {
   const [pestana, setPestana] = useState("simulacro");
   const { historial, agregar, borrar } = useHistorial();
+  const botones = useRef({});
+
+  // Dentro de un grupo de pestañas, el tabulador entra y sale del grupo: entre
+  // pestañas se navega con las flechas, y con Inicio y Fin a los extremos.
+  const onTecla = (e) => {
+    const actual = PESTANAS.findIndex(([id]) => id === pestana);
+    const ultima = PESTANAS.length - 1;
+    const destino = {
+      ArrowRight: actual === ultima ? 0 : actual + 1,
+      ArrowLeft: actual === 0 ? ultima : actual - 1,
+      Home: 0,
+      End: ultima,
+    }[e.key];
+
+    if (destino === undefined) return;
+    e.preventDefault();
+    const [id] = PESTANAS[destino];
+    setPestana(id);
+    botones.current[id]?.focus();
+  };
 
   return (
     <div className="app">
@@ -30,17 +50,22 @@ export default function App() {
           {PESTANAS.map(([id, nombre]) => (
             <button
               key={id}
+              id={`pestana-${id}`}
+              ref={(el) => (botones.current[id] = el)}
               role="tab"
               aria-selected={pestana === id}
+              aria-controls={`panel-${id}`}
+              tabIndex={pestana === id ? 0 : -1}
               className="pestana"
               onClick={() => setPestana(id)}
+              onKeyDown={onTecla}
             >
               {nombre}
             </button>
           ))}
         </nav>
 
-        <main className="carpeta">
+        <main className="carpeta" role="tabpanel" id={`panel-${pestana}`} aria-labelledby={`pestana-${pestana}`}>
           {pestana === "simulacro" && <Simulacro historial={historial} onResultado={agregar} />}
           {pestana === "juego" && <Juego />}
           {pestana === "progreso" && (

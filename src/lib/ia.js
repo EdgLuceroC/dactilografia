@@ -1,7 +1,7 @@
 /**
  * Cliente de la IA (opcional).
  *
- * La aplicación es autosuficiente sin IA: hay tres textos incluidos y toda la
+ * La aplicación es autosuficiente sin IA: hay nueve textos incluidos y toda la
  * corrección es local. La IA solo agrega textos nuevos y devoluciones escritas.
  *
  * El endpoint se configura con `VITE_IA_ENDPOINT` y recibe un cuerpo con la
