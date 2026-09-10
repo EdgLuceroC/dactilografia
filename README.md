@@ -9,6 +9,8 @@ La aplicación reproduce esa consigna: cronometra, corrige con el mismo criterio
 [![React](https://img.shields.io/badge/React-18-1C2230.svg)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-5-1C2230.svg)](https://vite.dev)
 
+![El simulacro en curso: el texto a copiar con las palabras ya escritas en gris, dos errores subrayados en rojo, el reloj en 3:43 y el contador en 37 palabras correctas](docs/img/simulacro.jpg)
+
 ---
 
 ## Qué incluye
@@ -25,13 +27,21 @@ La aplicación reproduce esa consigna: cronometra, corrige con el mismo criterio
 
 Al entregar, el resultado separa los errores en seis categorías —tildes y ñ, mayúsculas, puntuación, letras cambiadas, palabras salteadas y palabras de más—, muestra ejemplos concretos de lo que se escribió y detecta las letras que más se escapan.
 
+![Resultado de un intento: sello de NO ALCANZA con 37 palabras correctas, el desglose por tipo de error y tres ejemplos de palabras equivocadas](docs/img/resultado.png)
+
 ### Juego de palabras
 
 Vocabulario judicial que cae desde arriba y hay que tipear con su tilde y su mayúscula antes de que toque el piso. La velocidad sube cada ocho aciertos. Sirve para automatizar las palabras difíciles sin la presión del cronómetro.
 
+![El juego en curso: seis palabras judiciales cayendo y la palabra caducidad resaltada porque coincide con lo que se está escribiendo](docs/img/juego.jpg)
+
 ### Progreso
 
 Gráfico de palabras correctas por intento contra la línea de la meta, promedio de los últimos simulacros, mejor marca y el tipo de error que más palabras cuesta. Todo se guarda **en el navegador**: no hay cuentas, ni servidor, ni datos que salgan de la máquina.
+
+![Gráfico de once intentos subiendo de 42 a 103 palabras correctas, con la línea punteada de la meta en 100 y la tabla de detalle debajo](docs/img/progreso.jpg)
+
+<sub>Los datos del gráfico son de ejemplo, para mostrar cómo se ve la sección con varios intentos cargados.</sub>
 
 ### IA (opcional)
 
@@ -83,6 +93,7 @@ dactilografia/
 ├── api/
 │   └── ia.js                  # Proxy serverless: guarda la clave del lado del servidor
 ├── docs/
+│   ├── img/                   # Capturas del README
 │   ├── arquitectura.md        # Cómo está armado y por qué
 │   ├── correccion.md          # El algoritmo de corrección, en detalle
 │   ├── ia.md                  # Configurar (o no) la IA

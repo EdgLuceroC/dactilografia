@@ -17,7 +17,9 @@ export default function GraficoProgreso({ intentos }) {
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Palabras correctas por intento">
         <line x1={PX} x2={W - PX} y1={H - PY} y2={H - PY} className="eje" />
         <line x1={PX} x2={W - PX} y1={Y(META)} y2={Y(META)} className="meta" />
-        <text x={W - PX} y={Y(META) - 6} textAnchor="end" className="meta-t">
+        {/* La etiqueta va a la izquierda: el intento más reciente entra por la
+            derecha y, si anda cerca de la meta, se pisaría con este texto. */}
+        <text x={PX} y={Y(META) - 8} textAnchor="start" className="meta-t">
           meta: {META}
         </text>
 
